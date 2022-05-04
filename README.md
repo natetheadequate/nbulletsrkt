@@ -23,7 +23,6 @@ It appears to me that the best way to test functions with helpers without going 
 ## Randomness
 Although I eventually changed it, there was a point where the function to generate a random number of ships had a dummy parameter which was necessary to prevent the function from being memoized. After following the design recipe closer, I rewrote the function to call a helper function with a random number as a parameter, which then generated that number of ships in a random place. 
 
-# More On Randomness
-
+## More On Randomness
 Using Random objects in java was a source of much pain, especially when it came to testing, since new constructors had to be made which took in a Random seed. Because of tests, the Random seed had to be lugged along every time a game was made like the blanket of Linus from Peanuts. Having to alter the actual code for the sake of tests doesn't seem very clean. Furthermore, without mutability, a new Random seed had to be made at the start of every test method which had any randomness since the order in which the tester lib runs the test methods is random and changes each time. 
 On the other hand, check-random worked lovely in Racket 
