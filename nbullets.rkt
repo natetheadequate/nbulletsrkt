@@ -1,12 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname nbullets) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
-; local variable to test different game constants doesn't work bc fns are memoized
-; perhaps a betteer storage mechanism would be to have objects extend a game which had game constant,
-; but this is only possible in oop
-
-;; using helper functions in tests can be dangerous if there is a discrepancy between what you think the function does and what it actually does / what its tests check
-
 (require 2htdp/universe)
 (require 2htdp/image)
 
@@ -316,7 +310,7 @@
                (make-bullet (make-posn 22 (+ 31 BULLET-SPEED)) 270 3)
                (make-bullet (make-posn 50 (- 70 BULLET-SPEED)) 90 3)) 0.001)
 (define (tick-bullets bullets ships)
-  (map move-bullet (explode-bullets (filter bullet-onscreen? bullets) ships)))
+  ( (explode-bullets (filter bullet-onscreen? bullets) ships)))
 
 ; move-bullet: Bullet -> Bullet
 ; moves a bullet for one tick
