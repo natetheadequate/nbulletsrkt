@@ -1,5 +1,5 @@
 # N-Bullets in Racket
-For a Fundies 2 assignment, we were tasked with making a knockoff of [this game](https://www.crazygames.com/game/10-bullets-html-5) in Java. Over Spring Break, I rewrote it in Racket, which was the language Fundies 1 was taught in. Doing the same project in both languages revealed key differences between them
+For a Fundies 2 assignment, we were tasked with making a knockoff of [this game](https://www.crazygames.com/game/10-bullets-html-5) in Java. Over Spring Break, I rewrote it in Racket, which was the language Fundies 1 was taught in *Update Fall 2023: Northeastern has switched from Racket to Kotlin Script. This makes me sad (not that I have anything against Kotlin, I just like how Racket forces everybody to think differently about programming, rather than giving a leg up to people with experience)*. Doing the same project in both languages revealed key differences between them
 
 ## Java required more code
 Racket was tested more extensively and included templates, yet it had only 597 lines, 2993 words, and 25750 characters compared to 1198 lines, 4398 words, and 47446 characters across all 8 java files. 
